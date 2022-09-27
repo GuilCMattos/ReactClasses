@@ -1,6 +1,8 @@
 import React from 'react'
 import  ReactDOM  from 'react-dom'
 
-const elemento = <h1>React 2</h1>
+import Primeiro from './components/Primeiro'
 
-ReactDOM.render(elemento, document.getElementById('root'))
+
+
+ReactDOM.render(<Primeiro title="React" subtitle="É o melhor framework"/>, document.getElementById('root'))
