@@ -1,8 +1,7 @@
 import React from 'react'
 import  ReactDOM  from 'react-dom'
 
-import Primeiro from './components/Primeiro'
+import BomDia from './components/BomDia'
 
 
-
-ReactDOM.render(<Primeiro title="React" subtitle="É o melhor framework"/>, document.getElementById('root'))
+ReactDOM.render(<BomDia name="Guilherme"/>, document.getElementById('root'))
