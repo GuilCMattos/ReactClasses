@@ -1,7 +1,12 @@
 import React from 'react'
 import  ReactDOM  from 'react-dom'
 
-import BomDia from './components/BomDia'
 
 
-ReactDOM.render(<BomDia name="Guilherme"/>, document.getElementById('root'))
+import {BoaTarde, BoaNoite} from './components/Multipos'
+
+
+ReactDOM.render(<>
+    <BoaNoite name='Ana'/>
+    <BoaTarde nome='Bia'/>
+</>, document.getElementById('root'))
