@@ -1,0 +1,31 @@
+import { Component } from "react";
+
+export default class Saudacao extends Component { 
+
+    state = { 
+        type: this.props.type,
+        name: this.props.name
+    }
+
+    setTipo(e) { 
+        this.setState({type: e.target.value})
+    }
+
+    setName(e) { 
+        this.setState({name: e.target.value})
+    }
+
+    render() { 
+        const {type, name} = this.state
+
+        return ( 
+            <div>
+                <h1>{type} {name}</h1>
+                <hr />
+                <input type="text" placeholder="Tipo..." value={type}  onChange={e => this.setTipo(e)}/>
+                <input type="text" placeholder="Nome..." value={name} onChange={e => this.setName(e)} />
+            </div>
+        )
+
+    }
+}
