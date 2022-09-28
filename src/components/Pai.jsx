@@ -1,15 +1,14 @@
-import Filho from "./Filho";
+import React from "react"
+import { childrenWithProps } from "./utils/utils"
 
 export default props => (
     <div>
         <h1>{props.nome} {props.sobrenome}</h1>
 
         <ul>
-            <Filho nome="Pedro" sobrenome={props.sobrenome} />
-
-            <Filho {...props} />
-
-            <Filho {...props} nome="Carla" />
+        {
+          childrenWithProps(props)
+        }
         </ul>
     </div>
 )
