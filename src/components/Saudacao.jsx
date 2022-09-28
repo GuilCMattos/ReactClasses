@@ -2,9 +2,18 @@ import { Component } from "react";
 
 export default class Saudacao extends Component { 
 
-    state = { 
-        type: this.props.type,
-        name: this.props.name
+   
+    
+    constructor(props) { 
+        super(props) 
+
+        this.state = { 
+            type: this.props.type,
+            name: this.props.name
+        }
+
+        this.setName = this.setName.bind(this)
+        this.setTipo = this.setName.bind(this)
     }
 
     setTipo(e) { 
@@ -22,8 +31,8 @@ export default class Saudacao extends Component {
             <div>
                 <h1>{type} {name}</h1>
                 <hr />
-                <input type="text" placeholder="Tipo..." value={type}  onChange={e => this.setTipo(e)}/>
-                <input type="text" placeholder="Nome..." value={name} onChange={e => this.setName(e)} />
+                <input type="text" placeholder="Tipo..." value={type}  onChange={this.setTipo}/>
+                <input type="text" placeholder="Nome..." value={name} onChange={ this.setName} />
             </div>
         )
 
